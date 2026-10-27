@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: outline-before-writing
+expected_outcome: |
+  Explores read-only, recommends a README type, shows an outline with unverified items, and waits for approval without writing README.md.

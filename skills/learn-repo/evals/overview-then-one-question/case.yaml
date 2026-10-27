@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: overview-then-one-question
+expected_outcome: |
+  Whole-repo overview first, then a proposed learning path and a question about the goal; no files changed.

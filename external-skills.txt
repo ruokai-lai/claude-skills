@@ -1,0 +1,5 @@
+# Skills I use but did not write. One per line: name|owner/repo|path in repo|ref
+# ref is a branch, tag or commit SHA. Pin a SHA once you've checked the skill, so a later
+# change upstream can't alter what gets installed on my machines.
+grill-me|mattpocock/skills|skills/productivity/grill-me|main
+grilling|mattpocock/skills|skills/productivity/grilling|main
