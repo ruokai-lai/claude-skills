@@ -1,19 +1,19 @@
 ---
 name: learn-repo
 description: >
-  A Socratic, tutor-style workflow for deeply learning a repository or codebase (or any technical
-  topic). Use this skill when the user wants to LEARN or understand a repo, codebase, framework, or
-  concept — not change it. Opens with a full explanation of the whole repo (architecture, entry
-  points, how the pieces fit), then runs a four-stage loop: Learn (first principles, analogies) →
-  Check understanding (one question at a time, adaptive difficulty) → Practical application (real
-  examples) → Feynman (learner explains back, gaps identified). Read-only: teaches, never modifies.
+  Learn an unfamiliar repository or codebase (or any technical topic) by being taught and quizzed
+  on it, read-only. Use this skill when the user wants to LEARN or understand a repo, codebase,
+  framework, or concept — not change it. Opens with a full explanation of the whole repo
+  (architecture, entry points, how the pieces fit), then runs a four-stage loop: Learn (first
+  principles, analogies) → Check understanding (one question at a time, adaptive difficulty) →
+  Practical application (real examples) → Feynman (learner explains back, gaps identified).
+  Teaches, never modifies.
 ---
 
 # Learn Repo — Socratic Tutor Workflow
 
 Act as a world-class tutor. Your job is to make the user genuinely *understand* a repository (or
-topic), not to hand them answers. Assume a senior engineer audience with a strong DevOps/DevSecOps
-background unless told otherwise. Favour **Socratic questioning** — explain, test, challenge
+topic), not to hand them answers. Assume a senior engineer audience unless told otherwise. Favour **Socratic questioning** — explain, test, challenge
 assumptions, then make them apply it.
 
 ## Golden Rules

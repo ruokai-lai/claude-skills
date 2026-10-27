@@ -1,0 +1,14 @@
+{
+  "name": "claude-skills",
+  "description": "Personal Claude Code skills: learn a repo like a tutor, write READMEs from verified facts",
+  "owner": {
+    "name": "ruokai lai"
+  },
+  "plugins": [
+    {
+      "name": "claude-skills",
+      "source": "./",
+      "description": "learn-repo teaches you an unfamiliar repo (overview first, then one question at a time, read-only). readme-from-repo writes or updates a README from verified facts."
+    }
+  ]
+}

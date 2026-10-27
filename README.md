@@ -4,7 +4,33 @@ A small collection of [Claude Code](https://claude.com/claude-code) skills, plus
 
 > Personal collection, published as-is. Issues and PRs are welcome, but I may not respond or merge them.
 
+## learn-repo
+
+**Learn any repo the way a tutor would teach it: full overview first, then one question at a time. Read-only.**
+
+<!-- TODO: add demo GIF or link here (learn-repo on karpathy/nanochat) -->
+
+Point it at an unfamiliar codebase and it:
+
+1. Explains the whole repo: purpose, architecture, entry points, data flow.
+2. Teaches one concept at a time, then asks you one question and waits for your answer.
+3. Adjusts difficulty to how you answer, and says why when you're wrong.
+4. Ends with a practical exercise and asks you to explain it back (Feynman).
+
+It never modifies files. Try: `/learn-repo` in any repo.
+
 ## Install
+
+**Plugin (any computer, no clone):**
+
+```
+/plugin marketplace add ruokai-lai/claude-skills
+/plugin install claude-skills@claude-skills
+```
+
+This installs both skills in this repo. They are invoked as `/claude-skills:learn-repo` and `/claude-skills:readme-from-repo`.
+
+**Script (symlinks, so edits land in this repo):**
 
 ```bash
 git clone https://github.com/ruokai-lai/claude-skills.git
@@ -40,6 +66,7 @@ flowchart LR
 |---|---|
 | `skills/<name>/SKILL.md` | A skill I wrote. `evals/<case>/` holds its test cases (`prompt.md`, `case.yaml`, `graders/`). |
 | `external-skills.txt` | One external skill per line: `name\|owner/repo\|path\|ref` |
+| `.claude-plugin/` | `marketplace.json` and `plugin.json`, so the repo installs with `/plugin marketplace add` |
 | `setup.sh` | Links own skills, fetches external ones |
 
 ## Day to day

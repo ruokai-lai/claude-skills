@@ -1,0 +1,9 @@
+{
+  "name": "claude-skills",
+  "description": "learn-repo teaches you an unfamiliar repo (overview first, then one question at a time, read-only). readme-from-repo writes or updates a README from verified facts.",
+  "author": {
+    "name": "ruokai lai"
+  },
+  "repository": "https://github.com/ruokai-lai/claude-skills",
+  "license": "MIT"
+}
