@@ -3,3 +3,4 @@
 # change upstream can't alter what gets installed on my machines.
 grill-me|mattpocock/skills|skills/productivity/grill-me|main
 grilling|mattpocock/skills|skills/productivity/grilling|main
+hyperframes|heygen-com/hyperframes|skills/hyperframes|main

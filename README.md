@@ -116,7 +116,7 @@ Mine:
 | `readme-from-repo` | Reads a repo, then writes or updates its README from verified facts, with an approval gate. |
 | `recall` | Searches an archive of your past Claude Code sessions. Opt-in only: loads nothing into context until you pick it. |
 
-External (see `external-skills.txt`): `grill-me`, `grilling` from [mattpocock/skills](https://github.com/mattpocock/skills).
+External (see `external-skills.txt`): `grill-me`, `grilling` from [mattpocock/skills](https://github.com/mattpocock/skills); `hyperframes` (HTML to video) from [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes).
 
 ## License and credits
 
