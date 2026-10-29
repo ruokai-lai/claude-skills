@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: search-then-ask-before-loading
+expected_outcome: |
+  Runs recall.py search, shows the numbered hits as printed, then stops and asks which to load without running show.

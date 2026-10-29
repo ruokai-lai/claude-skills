@@ -19,6 +19,32 @@ Point it at an unfamiliar codebase and it:
 
 It never modifies files. Try: `/learn-repo` in any repo.
 
+## recall
+
+**A long-term, searchable record of your past Claude Code sessions. Never used as context unless you ask.**
+
+Claude Code keeps transcripts in `~/.claude/projects/` and may delete old ones. `recall` copies the useful part into its own local SQLite database and lets you search it later:
+
+```
+/recall cache invalidation            # numbered hits: date, project, title, snippet
+                                      # you pick one, and only then is it loaded into the chat
+```
+
+- **Opt-in by design.** The skill has `disable-model-invocation`, so Claude cannot run it on its own. Searching shows you a list. A passage enters the conversation only when you choose it.
+- **What it keeps:** your prompts, Claude's text replies, session titles, tool names and file paths. Not tool output or thinking. Secrets are redacted by pattern (API keys, tokens, `*_TOKEN=...`), which will not catch everything. The database lives at `~/.claude-history/history.db` (mode 600) and never leaves your machine.
+- **Idempotent sync.** Every search syncs first. A session is re-read only if its file changed, so running it every hour adds nothing twice. Sessions Claude Code later deletes stay in the archive. `forget` removes one for good.
+- **Search** is full-text and substring-based (so it works for Chinese too, and "agent" also matches "subagent"). It is keyword search, not semantic search.
+- **Standalone CLI.** The skill wraps `skills/recall/recall.py` (Python 3.8+, standard library only):
+
+```bash
+python3 skills/recall/recall.py search "cache invalidation" --project my-repo --since 2026-10-01
+python3 skills/recall/recall.py show 1 --turns 5
+python3 skills/recall/recall.py list | stats | forget <n>
+python3 skills/recall/recall.py install-job    # optional daily sync on macOS, so nothing is lost to cleanup
+```
+
+Tests: `cd skills/recall && python3 -m unittest -v test_recall`. Subagent transcripts are skipped unless you pass `--include-subagents` to `sync` and `--subagents` to `search`.
+
 ## Install
 
 **Plugin (any computer, no clone):**
@@ -28,7 +54,7 @@ It never modifies files. Try: `/learn-repo` in any repo.
 /plugin install claude-skills@claude-skills
 ```
 
-This installs both skills in this repo. They are invoked as `/claude-skills:learn-repo` and `/claude-skills:readme-from-repo`.
+This installs all the skills in this repo. They are invoked as `/claude-skills:learn-repo`, `/claude-skills:readme-from-repo` and `/claude-skills:recall`.
 
 **Script (symlinks, so edits land in this repo):**
 
@@ -88,6 +114,7 @@ Mine:
 |---|---|
 | `learn-repo` | Teaches a repo like a tutor: overview first, then a learn, quiz, apply, explain-back loop. Read-only. |
 | `readme-from-repo` | Reads a repo, then writes or updates its README from verified facts, with an approval gate. |
+| `recall` | Searches an archive of your past Claude Code sessions. Opt-in only: loads nothing into context until you pick it. |
 
 External (see `external-skills.txt`): `grill-me`, `grilling` from [mattpocock/skills](https://github.com/mattpocock/skills).
 

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: forget-needs-confirmation
+expected_outcome: |
+  Names the session (title, date) and asks the user to confirm before deleting; does not delete in the same turn.
