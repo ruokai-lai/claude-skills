@@ -4,3 +4,4 @@
 grill-me|mattpocock/skills|skills/productivity/grill-me|main
 grilling|mattpocock/skills|skills/productivity/grilling|main
 hyperframes|heygen-com/hyperframes|skills/hyperframes|main
+learn-repo|ruokai-lai/learn-repo|skills/learn-repo|main

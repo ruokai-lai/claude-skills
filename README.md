@@ -6,18 +6,7 @@ A small collection of [Claude Code](https://claude.com/claude-code) skills, plus
 
 ## learn-repo
 
-**Learn any repo the way a tutor would teach it: full overview first, then one question at a time. Read-only.**
-
-<!-- TODO: add demo GIF or link here (learn-repo on karpathy/nanochat) -->
-
-Point it at an unfamiliar codebase and it:
-
-1. Explains the whole repo: purpose, architecture, entry points, data flow.
-2. Teaches one concept at a time, then asks you one question and waits for your answer.
-3. Adjusts difficulty to how you answer, and says why when you're wrong.
-4. Ends with a practical exercise and asks you to explain it back (Feynman).
-
-It never modifies files. Try: `/learn-repo` in any repo.
+Moved to its own repo: **[ruokai-lai/learn-repo](https://github.com/ruokai-lai/learn-repo)**, a tutor-style skill that teaches you an unfamiliar codebase. This repo installs it as an external skill.
 
 ## recall
 
@@ -54,7 +43,7 @@ Tests: `cd skills/recall && python3 -m unittest -v test_recall`. Subagent transc
 /plugin install claude-skills@claude-skills
 ```
 
-This installs all the skills in this repo. They are invoked as `/claude-skills:learn-repo`, `/claude-skills:readme-from-repo` and `/claude-skills:recall`.
+This installs all the skills in this repo. They are invoked as `/claude-skills:readme-from-repo` and `/claude-skills:recall`.
 
 **Script (symlinks, so edits land in this repo):**
 
@@ -112,11 +101,10 @@ Mine:
 
 | Skill | What it does |
 |---|---|
-| `learn-repo` | Teaches a repo like a tutor: overview first, then a learn, quiz, apply, explain-back loop. Read-only. |
 | `readme-from-repo` | Reads a repo, then writes or updates its README from verified facts, with an approval gate. |
 | `recall` | Searches an archive of your past Claude Code sessions. Opt-in only: loads nothing into context until you pick it. |
 
-External (see `external-skills.txt`): `grill-me`, `grilling` from [mattpocock/skills](https://github.com/mattpocock/skills); `hyperframes` (HTML to video) from [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes).
+External (see `external-skills.txt`): `learn-repo` from [ruokai-lai/learn-repo](https://github.com/ruokai-lai/learn-repo), `grill-me`, `grilling` from [mattpocock/skills](https://github.com/mattpocock/skills); `hyperframes` (HTML to video) from [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes).
 
 ## License and credits
 
